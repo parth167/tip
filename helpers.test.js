@@ -18,12 +18,12 @@ describe('helper test (with setup and tear-down)', function () {
   it('should sum total bill on sumPaymentTotal()', function () {
     expect(sumPaymentTotal('billAmt')).toEqual(100);
 
-    billAmtInput.value = 200;
-    tipAmtInput.value = 30;
+    billAmtInput.value = 100;
+    tipAmtInput.value = 15;
 
     submitPaymentInfo();
 
-    expect(sumPaymentTotal('billAmt')).toEqual(300);
+    expect(sumPaymentTotal('billAmt')).toEqual(200);
   });
   it('should sum total tip percentage on sumPaymentTotal()', function () {
     expect(sumPaymentTotal('tipPercent')).toEqual(15);
